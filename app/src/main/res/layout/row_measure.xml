@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/body_part1"
+            style="@style/MeasurementItem"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/padding_large"
+            android:text="Neck"
+            app:layout_constraintBaseline_toBaselineOf="@+id/body_part1_value"
+            app:layout_constraintEnd_toStartOf="@+id/body_part1_value"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintHorizontal_weight="0.6"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/body_part1_value"
+            style="@style/MeasurementItem"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Body2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="16.75"
+            app:layout_constraintBaseline_toBaselineOf="@+id/unit"
+            app:layout_constraintEnd_toStartOf="@+id/unit"
+            app:layout_constraintHorizontal_weight="0.25"
+            app:layout_constraintStart_toEndOf="@+id/body_part1" />
+
+        <TextView
+            android:id="@+id/unit"
+            style="@style/MeasurementItem"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingEnd="@dimen/padding_large"
+            android:paddingStart="6dp"
+            android:text="in"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="0.15"
+            app:layout_constraintStart_toEndOf="@+id/body_part1_value" />
+    </android.support.constraint.ConstraintLayout>
+</layout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/updateWeight"
+        android:title="New Weight" />
+    <item
+        android:id="@+id/editExercise"
+        android:title="Edit Exercise" />
+    <item
+        android:id="@+id/removeExercise"
+        android:title="Remove Exercise"/>
+
+</menu>

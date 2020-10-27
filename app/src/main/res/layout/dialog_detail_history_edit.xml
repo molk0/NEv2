@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="detail"
+            type="com.maciej.software.nev2.model.Detail" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/padding_small">
+
+        <TextView
+            android:id="@+id/detail_history_date"
+            style="@style/HistoryInfoItem.Date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{detail.getFormattedDate()}"
+            android:layout_marginStart="@dimen/margin_extra_small"
+            android:paddingTop="@dimen/padding_medium"
+            android:paddingBottom="@dimen/padding_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Mon, 24 Jun, 2018" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/detail_history_layout_reprange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detail_history_date">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/detail_history_edit_reprange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_reps_done"
+                android:text="@{detail.repsDone}"
+                android:maxLines="3"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/detail_history_layout_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detail_history_layout_reprange">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/detail_history_edit_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_note"
+                android:text="@{detail.note}"
+                android:maxLines="3" />
+        </android.support.design.widget.TextInputLayout>
+    </android.support.constraint.ConstraintLayout>
+</layout>

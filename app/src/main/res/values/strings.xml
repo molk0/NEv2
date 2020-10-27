@@ -1,0 +1,98 @@
+<resources>
+    <string name="app_name">Naturally Enhanced Log</string>
+
+    <string name="workout_type_intensity">Intensity</string>
+    <string name="workout_type_volume">Volume</string>
+    <string name="workout_week1">Week 1</string>
+    <string name="workout_week2">Week 2</string>
+    <string name="workout_week3">Week 3</string>
+    <string name="workout_week4">Week 4</string>
+
+    <string name="hint_exercise_name">Exercise name</string>
+    <string name="hint_exercise_rep_range">Rep Range (eg. 10x10, 3RM, 3x5R)</string>
+    <string name="hint_exercise_weight">Weight</string>
+    <string name="hint_new_exercise_weight">New weight</string>
+    <string name="hint_reps_done">Reps</string>
+    <string name="hint_note">Note</string>
+
+    <string name="title_history">Recent</string>
+    <string name="title_today">Today</string>
+    <string name="title_about">About</string>
+    <string name="title_measurements">Measurements</string>
+    <string name="title_more_options">More Options</string>
+    <string name="title_extra_workouts">Extra Workout</string>
+    <string name="title_exercise_summary">My Exercises</string>
+    <string name="title_add_from_list">Select from my exercises</string>
+    <string name="title_add_exercise">Add exercise</string>
+    <string name="title_edit_exercise">Edit exercise</string>
+    <string name="title_detail">Details</string>
+    <string name="title_edit_detail">Edit note</string>
+    <string name="title_search">Search</string>
+
+    <string name="menu_intensity">Intensity</string>
+    <string name="menu_volume">Volume</string>
+    <string name="menu_more_options">More</string>
+    <string name="menu_update_weight">Update weight</string>
+    <string name="menu_edit_exercise">Edit exercise</string>
+    <string name="menu_show_history">Show history</string>
+    <string name="menu_remove_exercise">Remove exercise</string>
+    <string name="menu_extra_workouts">Extra workouts</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_about">About</string>
+
+    <string name="header_exercise">Exercise</string>
+    <string name="header_rep_range">Rep Range</string>
+    <string name="header_weight">Weight</string>
+
+    <string name="theme_light">Theme</string>
+
+    <string name="button_update">Update</string>
+    <string name="button_edit">Edit</string>
+    <string name="button_save">Save</string>
+    <string name="button_remove">Remove</string>
+    <string name="button_delete">Delete</string>
+    <string name="button_add">Add</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="button_undo">Undo</string>
+    <string name="button_add_note">+ NOTE</string>
+    <string name="button_show_more">Show more</string>
+
+    <string name="error_empty_list">No exercises added</string>
+    <string name="error_no_history">No history</string>
+    <string name="error_edit_exercise">Error editing the exercise</string>
+    <string name="error_add_exercise">Error adding a new exercise</string>
+    <string name="error_empty_name">Please enter a name</string>
+    <string name="error_empty_rep_range">Please enter a rep range</string>
+    <string name="error_empty_weight">Please enter new weight</string>
+    <string name="error_duplicate">Error adding exercise: already in this workout</string>
+
+    <string name="unit_cm">cm</string>
+    <string name="unit_in">in</string>
+
+    <string name="exercise_removed">Exercise removed</string>
+    <string name="detail_saved">Note saved</string>
+    <string name="detail_removed">Note removed</string>
+    <string name="dialog_remove_from_db">Remove from database</string>
+    <string name="dialog_exercise_warning">Any changes applied to this exercise will modify the already existing ones.</string>
+
+    <string name="empty_string">""</string>
+    <string name="version_num">Version: v1.02</string>
+    <string name="about_author">Author: Maciej Olko [maciej.software@gmail.com]</string>
+    <string name="about_description">All thanks to Alex for developing this program.\nThis app is a simple tracker for your workouts. I encourage you to update your weight (and reps), and at the end of the cycle check which exercises you got stronger on, and if it helped you increase your main lifts. That way, over time you will create the perfect template for you.\n\nThis app has no affiliation with the official program.\nVisit <b>www.outalpha.com/ne</b> if you\'d like to find out more or purchase the program.</string>
+
+    <string-array name="measurements">
+        <item>Neck</item>
+        <item>Chest</item>
+        <item>Waist</item>
+        <item>Upper Arms</item>
+        <item>Forearms</item>
+        <item>Quads</item>
+        <item>Calves</item>
+    </string-array>
+
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

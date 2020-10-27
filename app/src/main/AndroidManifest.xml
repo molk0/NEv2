@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.maciej.software.nev2">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.maciej.software.nev2.ui.MainActivity"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.maciej.software.nev2.ui.AddExercise.AddExerciseActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.maciej.software.nev2.ui.EditExercise.EditExerciseActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.maciej.software.nev2.ui.AboutActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.maciej.software.nev2.ui.ExtraWorkouts.ExtraWorkoutActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.maciej.software.nev2.ui.ExerciseDetail.ExerciseDetailActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name="com.maciej.software.nev2.ui.Measurements.MeasurementsActivity" />
+        <activity android:name="com.maciej.software.nev2.ui.ExerciseSummary.ExerciseSummaryActivity"></activity>
+        <activity android:name="com.maciej.software.nev2.ui.AddExercise.SelectExerciseFromList.SelectExerciseFromListActivity"></activity>
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="0a7e372e7232292291026960077af4d1f404d5ef" />
+    </application>
+    <uses-permission android:name="android.permission.INTERNET" />
+
+</manifest>

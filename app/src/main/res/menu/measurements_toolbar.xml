@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<!--    <item
+        android:id="@+id/add_new_measurement"
+        android:icon="@drawable/ic_add_black_24dp"
+        android:title="@string/button_add"
+        app:showAsAction="always" />-->
+
+    <item
+        android:id="@+id/measurement_settings"
+        android:icon="@drawable/ic_settings_black_18dp"
+        android:title="@string/menu_settings"
+        app:showAsAction="always" />
+</menu>

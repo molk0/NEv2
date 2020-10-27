@@ -1,0 +1,175 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlActivated">@color/colorDetail</item>
+        <item name="android:textColorPrimary">@color/appBlack</item>
+        <item name="android:windowBackground">@color/colorWindowBackground</item>
+    </style>
+
+    <style name="Toolbar.TitleText" parent="Base.TextAppearance.AppCompat.Title">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="ClickableRow">
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="Header">
+        <item name="android:fontFamily">sans-serif-condensed-light</item>
+        <item name="android:textColor">@color/appBlack</item>
+        <item name="android:textSize">@dimen/list_header_text_size</item>
+        <item name="android:padding">@dimen/header_padding</item>
+    </style>
+
+    <style name="ExerciseListElement">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:paddingStart">@dimen/list_item_start_padding</item>
+        <item name="android:paddingTop">@dimen/list_item_vertical_padding</item>
+        <item name="android:paddingBottom">@dimen/list_item_vertical_padding</item>
+    </style>
+
+    <style name="ExerciseListElement.Title">
+        <item name="android:textColor">@color/appBlack</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textSize">@dimen/list_item_title_text_size</item>
+    </style>
+
+    <style name="ExerciseListElement.RepRange">
+        <item name="android:fontFamily">sans-serif-condensed-light</item>
+        <item name="android:textSize">@dimen/list_item_rep_range_text_size</item>
+    </style>
+
+    <style name="ExerciseListElement.Weight">
+        <item name="android:textColor">#484848</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textSize">@dimen/list_item_weight_text_size</item>
+    </style>
+
+    <style name="ExerciseListElement.Button">
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:tint">@color/list_item_button</item>
+    </style>
+
+
+    <style name="BottomSheetClickable">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingBottom">@dimen/padding_bottom_sheet</item>
+        <item name="android:paddingTop">@dimen/padding_bottom_sheet</item>
+        <item name="android:paddingStart">@dimen/padding_small</item>
+        <item name="android:paddingEnd">@dimen/padding_small</item>
+    </style>
+
+    <style name="BottomSheetMenuTitle">
+        <item name="android:layout_marginStart">@dimen/margin_large</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/bottom_sheet_items</item>
+    </style>
+
+    <style name="BottomSheetMenuIcon">
+        <item name="android:layout_marginStart">@dimen/margin_small</item>
+        <item name="android:tint">@color/bottom_sheet_items</item>
+    </style>
+
+
+    <style name="ExerciseInfoInputLayout">
+        <item name="android:layout_marginStart">@dimen/padding_small</item>
+        <item name="android:paddingEnd">@dimen/padding_small</item>
+    </style>
+
+    <style name="ExerciseInfoInputText">
+        <item name="android:inputType">textCapWords</item>
+    </style>
+
+    <style name="ExerciseInfoInputNumber">
+        <item name="android:inputType">numberDecimal</item>
+        <item name="android:maxLength">4</item>
+    </style>
+
+    <style name="ExerciseInfoInputFAB">
+        <item name="android:layout_marginBottom">@dimen/margin_medium</item>
+        <item name="android:layout_marginEnd">@dimen/margin_medium</item>
+        <item name="android:tint">@android:color/white</item>
+    </style>
+
+    <style name="HistoryInfoTitle">
+        <item name="android:layout_marginStart">@dimen/margin_medium</item>
+        <item name="android:layout_marginTop">@dimen/margin_small</item>
+        <item name="android:textAppearance">@style/Base.TextAppearance.AppCompat.Headline</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="HistoryInfoItem">
+        <item name="android:layout_marginStart">@dimen/margin_large</item>
+    </style>
+
+    <style name="HistoryInfoItem.Date">
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.SearchResult.Title
+        </item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="HistoryInfoItem.Reps">
+        <item name="android:layout_marginTop">@dimen/margin_small</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Body1</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="HistoryInfoItem.Note">
+        <item name="android:layout_marginEnd">@dimen/margin_medium</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="HistoryInfoItem.Note.Limited">
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">2</item>
+    </style>
+
+    <style name="MoreOptionsItem">
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Menu</item>
+        <item name="android:drawablePadding">@dimen/padding_medium</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingStart">@dimen/padding_medium</item>
+        <item name="android:paddingEnd">@dimen/padding_medium</item>
+        <item name="android:paddingBottom">@dimen/padding_medium</item>
+        <item name="android:paddingTop">@dimen/padding_medium</item>
+    </style>
+
+    <style name="MeasurementItem">
+        <item name="android:textSize">17sp</item>
+        <item name="android:paddingTop">@dimen/padding_medium</item>
+        <item name="android:paddingBottom">@dimen/padding_medium</item>
+    </style>
+
+    <style name="MeasurementItem.Name">
+        <item name="android:textAppearance">@style/Base.TextAppearance.AppCompat.Body1</item>
+        <item name="android:paddingStart">@dimen/padding_large</item>
+
+    </style>
+
+    <style name="MeasurementItem.Clickable">
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="DividerLine">
+        <item name="android:background">@android:color/darker_gray</item>
+        <item name="android:layout_height">@dimen/line_width</item>
+        <item name="android:layout_marginLeft">6dp</item>
+        <item name="android:layout_marginRight">6dp</item>
+    </style>
+
+
+</resources>

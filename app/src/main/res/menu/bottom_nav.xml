@@ -1,0 +1,16 @@
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/intensity"
+        android:icon="@drawable/ic_deadlift_50"
+        android:title="@string/menu_intensity" />
+    <item
+        android:id="@+id/volume"
+        android:icon="@drawable/ic_dumbbell3_24"
+        android:title="@string/menu_volume" />
+    <item
+        android:id="@+id/more_options"
+        android:icon="@drawable/ic_more_horiz_black_24dp"
+        android:title="@string/menu_more_options" />
+</menu>

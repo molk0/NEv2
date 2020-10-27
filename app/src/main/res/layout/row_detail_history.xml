@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="detail"
+            type="com.maciej.software.nev2.model.Detail" />
+
+        <variable
+            name="presenter"
+            type="com.maciej.software.nev2.ui.DetailHistory.DetailHistory.Presenter" />
+
+        <variable
+            name="formatter"
+            type="com.maciej.software.nev2.util.TypeFormatter" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/view_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccentBright">
+
+            <ImageView
+                android:id="@+id/delete_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_extra_large"
+                android:contentDescription="@string/button_delete"
+                android:scaleX="1.25"
+                android:scaleY="1.25"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:srcCompat="@drawable/ic_delete_white_24dp" />
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/view_foreground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWindowBackground"
+            android:paddingBottom="@dimen/padding_medium"
+            android:paddingEnd="@dimen/padding_small"
+            android:paddingStart="@dimen/padding_small"
+            android:paddingTop="@dimen/padding_medium"
+            android:onClick="@{()->presenter.loadEditDetail(detail.id)}">
+
+            <TextView
+                android:id="@+id/history_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/padding_extra_small"
+                android:paddingStart="@dimen/padding_extra_small"
+                android:paddingTop="@dimen/padding_small"
+                android:paddingBottom="@dimen/padding_small"
+                android:text="@{detail.getFormattedDate()}"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Wed, May 20, 2018" />
+
+            <TextView
+                android:id="@+id/history_reps"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/padding_extra_small"
+                android:paddingStart="@dimen/padding_extra_small"
+                android:paddingTop="@dimen/padding_extra_small"
+                android:paddingBottom="@dimen/padding_extra_small"
+                android:text="@{detail.repsDone}"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@id/barrier"
+                app:layout_constraintEnd_toStartOf="@id/history_date"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="50x8 7 6 5\n40x8" />
+
+            <android.support.constraint.Barrier
+                android:id="@+id/barrier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="history_date,history_reps" />
+
+            <TextView
+                android:id="@+id/history_note"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/padding_extra_small"
+                android:paddingEnd="@dimen/padding_extra_small"
+                android:paddingStart="@dimen/padding_extra_small"
+                android:paddingTop="@dimen/padding_extra_small"
+                android:text="@{detail.note}"
+                android:visibility="@{detail.note.equals(@string/empty_string) ? View.GONE : View.VISIBLE}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/barrier"
+                tools:text="This is my note. It's not too long. But what if it was much longer than this?" />
+
+        </android.support.constraint.ConstraintLayout>
+    </FrameLayout>
+</layout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="exercise"
+            type="com.maciej.software.nev2.model.Exercise" />
+
+        <variable
+            name="presenter"
+            type="com.maciej.software.nev2.ui.ExerciseListFragment.ExerciseList.Presenter" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/row_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="@{()->presenter.loadExerciseHistory(exercise)}">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/name_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.63" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/weight_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.81" />
+
+        <TextView
+            android:id="@+id/exercise_name_tv"
+            style="@style/ExerciseListElement.Title"
+            android:layout_width="0dp"
+            android:text="@{exercise.name}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/name_guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Sample name very " />
+
+        <TextView
+            android:id="@+id/rep_range_tv"
+            style="@style/ExerciseListElement.RepRange"
+            android:text="@{exercise.repRange}"
+            tools:text="10x10"
+            app:layout_constraintStart_toStartOf="@id/name_guideline"
+            app:layout_constraintBaseline_toBaselineOf="@id/exercise_name_tv" />
+
+        <TextView
+            android:id="@+id/weight_tv"
+            style="@style/ExerciseListElement.Weight"
+            android:text="@{exercise.getFormattedWeight()}"
+            tools:text="150lb"
+            app:layout_constraintStart_toStartOf="@id/weight_guideline"
+            app:layout_constraintBaseline_toBaselineOf="@id/rep_range_tv"/>
+
+        <ImageButton
+            android:id="@+id/menu_ibtn"
+            style="@style/ExerciseListElement.Button"
+            android:layout_width="32dp"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/menu_more_options"
+            app:srcCompat="@drawable/ic_more_vert_black_24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <View
+            android:id="@+id/row_divider"
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="?android:attr/listDivider"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/exercise_name_tv" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</layout>

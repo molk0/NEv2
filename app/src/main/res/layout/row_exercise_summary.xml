@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="exercise"
+            type="com.maciej.software.nev2.model.Exercise" />
+
+        <variable
+            name="presenter"
+            type="com.maciej.software.nev2.ui.ExerciseSummary.ExerciseSummary.Presenter" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        style="@style/ClickableRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{()->presenter.loadBottomSheet(exercise)}"
+        android:paddingBottom="@dimen/padding_extra_small"
+        android:paddingTop="@dimen/padding_extra_small">
+
+        <TextView
+            android:id="@+id/exercise_name"
+            style="@style/ExerciseListElement.Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{exercise.name}"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/exercise_rep_range"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent"
+            tools:text="Close grip bench press on a slight incline" />
+
+
+        <TextView
+            android:id="@+id/exercise_rep_range"
+            style="@style/ExerciseListElement.RepRange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{exercise.repRange}"
+            app:layout_constraintBaseline_toBaselineOf="@id/exercise_name"
+            app:layout_constraintEnd_toStartOf="@id/guideline"
+            tools:text="10x10" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.88" />
+
+        <TextView
+            android:id="@+id/exercise_weight"
+            style="@style/ExerciseListElement.Weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:text="@{exercise.getFormattedWeight()}"
+            app:layout_constraintBaseline_toBaselineOf="@id/exercise_rep_range"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            tools:text="1250" />
+    </android.support.constraint.ConstraintLayout>
+</layout>

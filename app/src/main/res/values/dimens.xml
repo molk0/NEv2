@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="bottom_nav">56dp</dimen>
+    <dimen name="bottom_nav_with_buffer">64dp</dimen>
+    <dimen name="window_side_margin">8dp</dimen>
+
+    <dimen name="margin_extra_large">32dp</dimen>
+    <dimen name="margin_large">24dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_extra_small">4dp</dimen>
+
+    <dimen name="padding_extra_large">32dp</dimen>
+    <dimen name="padding_large">24dp</dimen>
+    <dimen name="padding_medium">16dp</dimen>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_extra_small">4dp</dimen>
+    <dimen name="padding_list_title">12dp</dimen>
+    <dimen name="padding_bottom_sheet">10dp</dimen>
+    <dimen name="margin_recent_date">14dp</dimen>
+
+    <dimen name="header_padding">10dp</dimen>
+    <dimen name="list_item_start_padding">10dp</dimen>
+    <dimen name="list_item_vertical_padding">10dp</dimen>
+
+    <dimen name="list_header_text_size">16sp</dimen>
+    <dimen name="list_item_title_text_size">20sp</dimen>
+    <dimen name="list_item_rep_range_text_size">18sp</dimen>
+    <dimen name="list_item_weight_text_size">18sp</dimen>
+
+    <dimen name="list_padding_small">2dp</dimen>
+    <dimen name="line_width">0.4dp</dimen>s
+</resources>

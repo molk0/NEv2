@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="exercise"
+            type="com.maciej.software.nev2.model.Exercise" />
+
+        <variable
+            name="presenter"
+            type="com.maciej.software.nev2.ui.AddExercise.SelectExerciseFromList.SelectExerciseFromList.Presenter" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/select_exercise"
+        style="@style/ClickableRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{()->presenter.selectExercise(exercise)}"
+        android:paddingBottom="@dimen/list_padding_small"
+        android:paddingTop="@dimen/list_padding_small">
+
+        <TextView
+            android:id="@+id/exercise_name"
+            style="@style/ExerciseListElement.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{exercise.name}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Sample name" />
+
+        <TextView
+            android:id="@+id/exercise_rep_range"
+            style="@style/ExerciseListElement.RepRange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_large"
+            android:text="@{exercise.repRange}"
+            app:layout_constraintBaseline_toBaselineOf="@id/exercise_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="5x8" />
+    </android.support.constraint.ConstraintLayout>
+</layout>
